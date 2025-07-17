@@ -1,0 +1,2 @@
+# Ethicalhacking-mynotes
+Daily Notes 
