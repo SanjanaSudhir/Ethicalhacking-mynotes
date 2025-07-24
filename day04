@@ -1,1 +1,114 @@
+# 📘 GitHub Upload + Kali Linux + `chmod` — Notes
+
+## 1. 🔧 GitHub Upload: Steps & Commands
+
+### 🛠️ Initial Setup (only once)
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
+
+### 📁 Start a Git Repository
+
+```bash
+cd your_project_folder
+git init
+```
+
+### 📂 Add & Commit Files
+
+```bash
+git add .                          # Adds all files
+git commit -m "Initial commit"     # Save with message
+```
+
+### 🔗 Connect to GitHub
+
+1. Create a repo on GitHub (don’t initialize with README)
+2. Then connect:
+
+```bash
+git remote add origin https://github.com/username/repo-name.git
+git branch -M main                 # Set branch to main
+```
+
+### 🚀 Push to GitHub
+
+```bash
+git push -u origin main
+```
+
+> ⚠️ Use a GitHub **Personal Access Token** if prompted for a password.
+
+---
+
+## 2. 🐧 Kali Linux (VirtualBox) – Useful Terminal Commands
+
+### 📁 File System Basics
+
+```bash
+ls -l             # Detailed listing
+cd folder/        # Change directory
+mkdir test/       # Create new directory
+touch file.txt    # Create empty file
+nano file.txt     # Edit text file
+```
+
+### 🧪 Running Files or Scripts
+
+```bash
+bash script.sh    # Run with Bash
+./script.sh       # Run if executable
+```
+
+---
+
+## 3. 🔐 `chmod` – File Permission Notes
+
+### ✔️ What is `chmod`?
+
+`chmod` changes the permissions of a file or directory.
+
+### ✅ Add Execute Permission
+
+```bash
+chmod +x script.sh
+```
+
+### 🧮 Numeric Permissions
+
+* Format: `chmod 755 file.sh`
+* Meaning of digits:
+
+  * **7 = rwx** (Read, Write, Execute)
+  * **6 = rw-**
+  * **5 = r-x**
+  * **4 = r--**
+
+| Value | Binary | Permission |
+| ----- | ------ | ---------- |
+| 7     | 111    | rwx        |
+| 6     | 110    | rw-        |
+| 5     | 101    | r-x        |
+| 4     | 100    | r--        |
+
+### Examples:
+
+```bash
+chmod 755 file.sh   # Owner: rwx, Group: r-x, Others: r-x
+chmod 644 file.txt  # Owner: rw-, Group: r--, Others: r--
+```
+
+---
+
+## 4. 🧾 Git Status & Logs
+
+### 🔍 Check Status
+
+```bash
+git status
+```
+
+
 
